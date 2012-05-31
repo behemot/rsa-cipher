@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<AssemblyName>rsa</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="rsa.cs" />
+		<Compile Include="lib\Options.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="System.Numerics.dll" />
+	</ItemGroup>
+	<Target Name="Build">
+		<CSC Sources="@(Compile)" References="@(Reference)" OutputAssembly="$(AssemblyName).exe" EmitDebugInformation="false" />
+	</Target>
+</Project>

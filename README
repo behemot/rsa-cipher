@@ -1,0 +1,18 @@
+Build project 
+
+MSBuild.exe .\rsa.csproj
+
+or use VS 2010
+
+Keygen from RSA768
+
+.\rsa.exe keygen /key:RSA768.key /pub:pub.key /priv:priv.key
+
+Encrypt
+
+.\rsa.exe encrypt /key:pub.key /in:input.txt /out:output.txt
+
+Decrypt
+
+.\rsa.exe decrypt /key:priv.key /in:output.txt /out:out.txt
+
